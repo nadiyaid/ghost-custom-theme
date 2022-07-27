@@ -1,0 +1,31 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<div class="main-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{#tag}}
+                <div class="cover-wrap text-center{{^if feature_image}} no-image{{/if}}" {{#if feature_image}} style="background-image: url({{feature_image}});"{{/if}}>
+                    <div class="cover-inner m-auto">
+                        <h1 class="name">
+                            {{name}}
+                        </h1>
+                        <div class="post-count">
+                            {{t "Total"}} {{plural ../pagination.total empty=(t "0 Post") singular=(t "1 Post") plural=(t "% Posts")}}
+                        </div>
+                        {{#if description}}
+                        <div class="description">
+                        {{description}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/tag}}
+                <div class="post-item-wrap d-flex">
+                    {{>loop}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{pagination}}
+</div>

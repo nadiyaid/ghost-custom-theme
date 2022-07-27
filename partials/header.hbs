@@ -1,0 +1,24 @@
+<header>
+    <nav class="site-navbar navbar navbar-expand-md">
+        <div class="container">
+            {{#if @site.logo}}
+            <a class="image-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"></a>
+            {{else}}
+            <a class="text-logo" href="{{@site.url}}">{{@site.title}}</a>
+            {{/if}}
+            <ul class="navbar-nav ml-3 mr-auto main-menu d-none d-xl-flex">
+            {{navigation}}
+            </ul>
+            <span class="menu-button ml-auto d-xl-none" id="menu-open">
+                {{> icons/menu}}
+            </span>
+            <span class="search-button" id="search-open">
+                {{> icons/search}}
+            </span>
+            <nav class="mobile-menu" id="mobile-menu"><ul>{{navigation}}</ul></nav>
+            <div class="backdrop hidden-md hidden-lg" id="backdrop">
+                <span class="menu-close align-center">{{> icons/close}}</span>
+            </div>
+        </div>
+    </nav>
+</header>

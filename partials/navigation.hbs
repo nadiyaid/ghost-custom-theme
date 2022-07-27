@@ -1,0 +1,9 @@
+{{#if isSecondary}}
+    {{#foreach navigation}}
+        <li class="{{slug}}{{#if current}} current-menu-item{{/if}}"><a href="{{url}}">{{label}}</a></li>
+    {{/foreach}}
+{{else}}
+    {{#foreach navigation}}
+        <li class="{{slug}}{{#if current}} current-menu-item{{/if}}"><a href="{{url}}">{{label}}</a></li>
+    {{/foreach}}
+{{/if}}

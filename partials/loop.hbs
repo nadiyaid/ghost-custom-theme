@@ -1,0 +1,26 @@
+{{#foreach posts visibility="all"}}
+<article class="post-item {{^if feature_image}}no-image{{/if}}">
+    {{#if feature_image}}
+    <div class="post-image" style="background-image: url({{feature_image}});"></div>
+    {{/if}}
+    <a href="{{url}}" class="permalink-overlay"></a>
+    {{#if featured}}
+    <span class="featured-icon">{{> icons/star}}</span>
+    {{/if}}
+    <span class="read-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+    <div class="content-wrap">
+        {{#if tags}}
+        <div class="tag-wrap">
+            {{tags separator=""}}
+        </div>
+        {{/if}}
+        <h2 class="title">
+            <a href="{{url}}">{{title}}</a>
+        </h2>
+        <div class="post-meta">
+            {{t "By"}} {{authors separator=", "}}
+            {{t "On"}} {{date format="MMMM DD, YYYY"}}
+        </div>
+    </div>
+</article>
+{{/foreach}}

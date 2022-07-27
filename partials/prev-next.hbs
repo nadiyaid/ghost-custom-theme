@@ -1,0 +1,44 @@
+<div class="prev-next-wrap">
+    <div class="post-item-wrap d-flex">
+        {{#prev_post in="primary_tag"}}
+        <article class="post-item {{^if feature_image}}no-image{{/if}}">
+            {{#if feature_image}}
+            <div class="post-image" style="background-image: url({{feature_image}});"></div>
+            {{/if}}
+            <a href="{{url}}" class="permalink-overlay"></a>
+            <span class="nav-text">{{t "Previous post"}}</span>
+            <span class="read-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+            <div class="content-wrap">
+                {{#if tags}}
+                <div class="tag-wrap">
+                    {{tags separator=""}}
+                </div>
+                {{/if}}
+                <h2 class="title">
+                    <a href="{{url}}">{{title}}</a>
+                </h2>
+            </div>
+        </article>
+        {{/prev_post}}
+        {{#next_post in="primary_tag"}}
+        <article class="post-item {{^if feature_image}}no-image{{/if}}">
+            {{#if feature_image}}
+            <div class="post-image" style="background-image: url({{feature_image}});"></div>
+            {{/if}}
+            <a href="{{url}}" class="permalink-overlay"></a>
+            <span class="nav-text">{{t "Next post"}}</span>
+            <span class="read-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+            <div class="content-wrap">
+                {{#if tags}}
+                <div class="tag-wrap">
+                    {{tags separator=""}}
+                </div>
+                {{/if}}
+                <h2 class="title">
+                    <a href="{{url}}">{{title}}</a>
+                </h2>
+            </div>
+        </article>
+        {{/next_post}}
+    </div>
+</div>

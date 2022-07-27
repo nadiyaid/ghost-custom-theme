@@ -1,0 +1,47 @@
+.single-post-wrap {
+    &.archive-page {
+        .post-image {
+            margin-bottom: 30px;
+        }
+    }
+}
+.tag-card {
+    background-color: $secondary-color;
+    margin-bottom: 30px;
+    color: $white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 1rem;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: background 0.3s ease;
+        border-radius: 1rem;
+    }
+    &.no-image {
+        &:before {
+            display: none;
+        }
+    }
+    &:hover {
+        &:before {
+            background-color: rgba($primary-color, 0.95);
+        }
+    }
+    .card-body {
+        position: relative;
+        padding: 64px 30px;
+    }
+    a {
+        color: $white;
+    }
+    .tag-name {
+        color: $white;
+    }
+}

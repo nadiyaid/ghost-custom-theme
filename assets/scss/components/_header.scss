@@ -1,0 +1,156 @@
+/* ===============================================
+navigation bar
+=============================================== */
+.site-navbar {
+height: 120px;
+}
+.text-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-dark;
+    &:hover, &:focus {
+        color: $text-dark;
+    }
+}
+.image-logo {
+    img {
+        max-height: 50px;
+    }
+}
+.main-menu {
+    font-weight: 600;
+    li  {
+        margin-right: 28px;
+        position: relative;
+        line-height: 2rem;
+        a {
+            color: $text-dark;
+            display: inline-flex;
+            &:hover {
+                color: $primary-color;
+                &:before {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+        &.current-menu-item {
+            a {
+                color: $primary-color;
+            }
+		}
+		&.btn-menu {
+			a {
+				background: $primary-color;
+				color: $white;
+				padding: 0px 8px;
+				&:hover {
+					background-color: rgba($primary-color, 0.9);
+				}
+			}
+		}
+    }
+}
+.menu-button {
+    margin-right: 8px;
+}
+.search-button, .menu-button {
+    display: inline-flex;
+    cursor: pointer;
+    margin-left: 16px;
+    color: $text-dark;
+    transition: all 0.25s;
+    svg {
+        height: 20px;
+        width: 20px;
+        
+    }
+    &:hover {
+        color: $primary-color;
+    }
+}
+.mobile-menu{
+	background: $white;
+	position: fixed;
+	top: 0;
+	left: -260px;
+	width: 260px;
+	height: 100%;
+	overflow-y: auto;
+	z-index: 1060;
+	transition: left 0.3s;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin-top: 16px;
+		> li {
+            line-height: 3rem;
+            font-weight: 600;
+			position: relative;
+			a {
+				padding:  0px 16px 0px 32px;
+				display: block;
+				color: $text-dark;
+				// border-bottom: 1px solid $border-color;
+				transition: all 0.2s;
+				&:hover, &:focus {
+					color: $primary-color;
+				}
+			}
+			&.current-menu-item {
+				a {
+					color: $primary-color;
+				}
+			}
+			&.btn-menu {
+				a {
+					background: $primary-color;
+					color: $white;
+					margin-top: 8px;
+					&:hover {
+						background-color: rgba($primary-color, 0.9);
+					}
+				}
+			}
+		}
+	}
+}
+.backdrop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1050;
+	background: rgba($black, 0.9);
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+	transition: all 0.3s;
+	.menu-close {
+		position: absolute;
+		left: 0px;
+		top: 15px;
+		width: 24px;
+		line-height: 24px;
+		transition: all 0.3s;
+		color: $white;
+		border-radius: 50%;
+	}
+}
+.mobile-menu-opened {
+	.mobile-menu {
+		left: 0px;
+	}
+	.backdrop {
+		opacity: 1;
+		visibility: visible;
+		.menu-close {
+            left: 275px;
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+		}
+	}
+}

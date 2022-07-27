@@ -1,0 +1,40 @@
+{{#foreach authors}}
+<div class="about-author clearfix">
+    <div class="row">
+        <div class="col-md-auto">
+            {{#if profile_image}}
+                <a href="{{url}}" title="{{name}}"><img src="{{profile_image}}" alt="Author image" class="avatar"></a>
+                {{else}}
+                <a href="{{url}}" title="{{name}}"><div class="avatar no-image">{{> icons/user}}</div></a>
+            {{/if}}
+        </div>
+        <div class="col">
+            <div class="details">
+                <h3 class="author"><a href="{{url}}">{{name}}</a></h3>
+                <ul class="meta-info">
+                    {{#if twitter}}
+                    <li><a href="{{twitter_url}}" target="_blank">{{> icons/twitter}}</a></li>
+                    {{/if}}
+                    {{#if facebook}}
+                    <li><a href="{{facebook_url}}" target="_blank">{{> icons/facebook}}</a></li>
+                    {{/if}}
+                    {{#if website}}
+                    <li><a href="{{website}}" target="_blank">{{> icons/link}}</a></li>
+                    {{/if}}
+                    {{#if location}}
+                    <li class="location">{{> icons/location}}{{location}}</li>
+                    {{/if}}
+                </ul>
+                {{#if bio}}
+                <div class="bio">
+                    {{{bio}}}
+                </div>
+                {{/if}}
+                <div>
+                    <a class="author-link" href="{{url}}">{{t "See All post by this author"}} {{> icons/arrow-right}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/foreach}}

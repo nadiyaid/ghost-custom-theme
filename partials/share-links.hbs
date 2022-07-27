@@ -1,0 +1,21 @@
+<div class="share-links-wrap">
+    <h4 class="share-heading text-center">{{t "Share this post"}}</h4>
+    <ul class="share-links text-center">
+        <!-- facebook -->
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="{{t "Share on Facebook"}}">{{> icons/facebook}}</a>
+        </li>
+        <!-- twitter -->
+        <li>
+            <a class="twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=580,height=296');return false;" title="{{t "Share on Twitter"}}">{{> icons/twitter}}</a>
+        </li>
+        <!-- linkedin -->
+        <li>
+            <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}" onclick="window.open(this.href, 'linkedin-share', 'width=580,height=296');return false;" title="{{t "Share on Linkedin"}}">{{> icons/linkedin}}</a>
+        </li>
+        <!-- pinterest -->
+        <li>
+            <a class="pinterest" href="http://pinterest.com/pin/create/button/?url={{url absolute="true"}}&description={{encode title}}" onclick="window.open(this.href, 'linkedin-share', 'width=580,height=296');return false;" title="{{t "Share on Pinterest"}}">{{> icons/pinterest}}</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,80 @@
+.subscription-expiration-warning {
+    background: $error;
+    color: $white;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+}
+.account-info {
+    margin-top: 2rem;
+    flex-direction: column;
+    .header {
+        .title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            color: $text-dark;
+        }
+    }
+    .subscriber-avatar-wrap {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: $secondary-color;
+        margin-bottom: 0.5rem;
+        position: relative;
+        svg {
+            width: 80px;
+            height: 80px;
+            color: $text-light;
+            position: absolute;
+            left: 0px;
+            top: 8px;
+        }
+        .avatar-img {
+            position: relative;
+        }
+    }
+}
+.subscriber-detail-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+    border: 1px solid $text-light;
+}
+.subscriber-detail {
+    flex: 100%;
+    margin-bottom: 1rem;
+    .label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+    .content {
+        font-weight: 700;
+        color: $text-dark;
+    }
+}
+@media screen and (min-width:768px) {
+    .subscriber-detail {
+        flex: 50%;
+    }
+}
+.members-button-wrap {
+    padding: 1rem 1rem 0 1rem;
+    .btn {
+        margin: 0 0.5rem 1rem 0;
+    }
+    .cancel-error {
+        display: inline-block;
+        color: $error;
+        margin-bottom: 1rem;
+    }
+}
+
+.subscribe-link-wrap {
+    margin: 1.5rem 0;
+}
+.cancel-link.loading {
+    color: transparent;
+}

@@ -1,0 +1,19 @@
+<div class="prev-next-wrap">
+    <div class="content-wrap d-flex">
+        <article>
+            <div style="background-image: url({{feature_image}});">
+                <a href="{{url}}" class="permalink-overlay"></a>
+                <div class="content-wrap">
+                    {{#if tags}}
+                    <div class="tag-wrap">
+                        {{tags separator=""}}
+                    </div>
+                    {{/if}}
+                    <h2 class="title">
+                        <a href="{{url}}">{{title}}</a>
+                    </h2>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>

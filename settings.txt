@@ -1,0 +1,4 @@
+root: C:\Users\asset\Downloads\tes_ghost\content\themes\tona 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none

@@ -1,0 +1,125 @@
+{{!< default}} {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+    <div class="main-content-area">
+        {{#is "home"}}
+
+        {{/is}}
+        <div class="container">
+            <header class="masthead">
+                <div class="container px-4">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <!-- Mashead text and app badges-->
+                            <div class="mb-5 mb-lg-0 text-center text-lg-left">
+                                <h1 class="fw-bold mb-0" style="color: #ED3237">Manage Your Data </h1>
+                                <h1 class="mb-3 fw-bold">Like Never Before!</h1>
+                                <p class="fw-normal mb-4">Finterlabs is an enterprise class IT platform, that provides
+                                    the features and functionalities of big data application in one single solution for
+                                    developing, deploying, operating, and managing big data.</p>
+                                <button onclick="location.href='/about-2/'"
+                                    class="btn btn-secondary rounded mb-2 mb-lg-0 mr-3">Learn More</button>
+                                <button onclick="location.href='/request/'"
+                                    class="btn btn-primary rounded mb-2 mb-lg-0">Request Demo</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%">
+                                <source src="{{asset 'images/Animation Hero Main Page full.mp4'}}" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <section class="product">
+            <div class="text-center py-5" id="startnow">
+                <div class="container px-4 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col">
+                            <h1 class=" mb-3 fw-bold">Grow With Our Amazing Product</h1>
+                            <p class="fw-normal fs-5">We focused on providing efficient analytics for extremely large datasets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="py-1" id="services">
+                <div class="container px-4">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{asset 'images/Illustration - Finterlabs Platform.svg'}}" alt="" />
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="display-6 mb-3">Finterlabs Platform</h2>
+                            <p class="fw-normal mb-4">Business Reporting platform which is integrated with data processing and streamlined data to produce an operational and predictive analytics report.</p>
+                            <button onclick="location.href='/platform/'"
+                                class="btn btn-primary rounded px-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-1">
+                <div class="container px-4">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last">
+                            <img class="img-fluid" src="{{asset 'images/Illustration - Finterlabs Analytics.svg'}}" alt="" />
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="display-6 mb-3">Finterlabs Analytics</h2>
+                            <p class="fw-normal mb-4">With Finterlabs Analytics, we can helps your company to gain insight, by turning data into high quality information, providing deeper insights about the business situation.</p>
+                            <button onclick="location.href='/analytics/'" class="btn btn-primary rounded px-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-1">
+                <div class="container px-4 mb-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <img class="img-fluid" src="{{asset 'images/Illustration - Finterlabs Framework.svg'}}" alt="" />
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="display-6 mb-3">Finterlabs Framework</h2>
+                            <p class="fw-normal mb-4">The Development open source framework such as Microsoft's Cloud platform, Azure, with a broad spectrum of open-source Apache technologies, including Hadoop and Spark. </p>
+                            <button onclick="location.href='/framework/'" class="btn btn-primary rounded px-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" style="background: transparent !important;">
+                <div class="container px-4 text-center py-5">
+                    <h2 class="mb-5 fw-bold text-center">Our Services Revolves Around <br />
+                        Business Solution</h3>
+                    <div class="row gx-4 text-center">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 rounded--1 shadow">
+                                <div class="card-body p-5">
+                                    <img src="{{asset 'images/Service - Solution.svg'}}" alt="" width="100">
+                                        <h3 class="card-title fw-bold mb-3">Solution</h3>
+                                    <button onclick="location.href='/solution/'" class="btn btn-primary rounded px-3">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 rounded--1 shadow">
+                                <div class="card-body p-5">
+                                    <img src="{{asset 'images/Service - Consultation.svg'}}" alt="" width="100">
+                                    <h3 class="card-title fw-bold mb-3">Consultation</h3>
+                                    <button onclick="location.href='/consultation/'" class="btn btn-primary rounded px-3">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 rounded--1 shadow">
+                                <div class="card-body p-5">
+                                    <img src="{{asset 'images/Service - Training.svg'}}" alt="" width="100">
+                                    <h3 class="card-title fw-bold mb-3">Training</h3>
+                                    <button onclick="location.href='/training/'" class="btn btn-primary rounded px-3">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>

@@ -1,0 +1,82 @@
+@media (max-width: 991px) {
+    .slider-item, .single-post-wrap {
+        .post-image {
+            .content-wrap {
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .about-author {
+        .avatar {
+            margin-bottom: 16px;
+        }
+    }
+    .slider-item, .single-post-wrap {
+        .post-image {
+            .content-wrap {
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .post-item-wrap {
+        .post-item {
+            flex: 1 0 300px;
+            .content-wrap {
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .pagination-wrap {
+        .page-number {
+            display: block;
+        }
+    }
+    .kg-bookmark-container {
+        flex-direction: column-reverse;
+    }
+    .kg-bookmark-content {
+        padding: 8px 0px !important;
+    }
+    .post-single .post-content .kg-bookmark-thumbnail {
+        flex-basis: 10rem;
+    }
+    .post-single .post-content .kg-bookmark-thumbnail img {
+        max-height: 200px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .site-navbar {
+        height: 80px;
+    }
+    .image-logo {
+        img {
+            max-height: 50px;
+        }
+    }
+    .slider-bottom {
+        .arrow-wrap {
+            span {
+                &:first-child {
+                    margin-right: 16px;
+                }
+            }
+        }
+        .dots-wrap {
+            display: none;
+        }
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1260px) {
+    .container {
+        max-width: 1230px;
+    }
+}

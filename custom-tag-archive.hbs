@@ -1,0 +1,35 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<div class="main-content-area">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                {{#post}}
+                <div class="single-post-wrap archive-page">
+                    <div class="content-wrap">
+                        <h1 class="title" style="color: #ed3237;text-align:center">
+                            {{title}}
+                        </h1>
+                    </div>
+                </div>
+                {{/post}}
+            </div>
+        </div>
+        <div class="row">
+            {{#get "tags" limit="2" include="count.posts" order="count.posts asc, name desc"}}
+            {{#foreach tags}}
+            <div class="col-lg-12 col-md-12">
+                <div class="tag-card text-center{{^if feature_image}} no-image{{/if}}" {{#if feature_image}}style="background-image: url({{feature_image}});"{{/if}}>
+                    <a href="{{url}}">
+                        <div class="card-body">
+                            <h3 class="tag-name h2">{{name}}</h3>
+                            {{!-- <div class="post-count">{{plural count.posts empty=(t "0 Post") singular=(t "1 Post") plural=(t "% Posts")}}</div> --}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</div>

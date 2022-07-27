@@ -1,0 +1,88 @@
+.site-footer {
+    background-color: $secondary-color;
+    color: $text-light;
+    padding: 40px 0px;
+    margin-top: 48px;
+    a {
+        color: $text-light;
+        &:hover {
+            color: $white;
+        }
+    }
+    .widget {
+        margin-bottom: 24px;
+        .widget-title {
+            color: $white;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        .subscribe-widget {
+            input[type='text'], input[type='email'] {
+                border: 1px solid $white;
+            }
+        }
+        .tagcloud {
+            a {
+                display: inline-flex;
+                font-size: 0.875rem;
+                letter-spacing: 0.5px;
+                text-transform: capitalize;
+                white-space: nowrap;
+                margin: 0px 20px 10px 0px;
+            }
+        }
+        .navigation {
+            ul {
+                padding: 0;
+                margin: 0;
+                li {
+                    list-style: none;
+                    display: inline-flex;
+                    margin: 0px 20px 10px 0px;
+                    a {
+                        display: inline-flex;
+                        font-size: 0.875rem;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        white-space: nowrap;
+                    }
+                    &.current-menu-item {
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .social-links {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                display: inline-flex;
+                margin-right: 20px;
+                margin-bottom: 16px;
+                a {
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .copyright-info {
+        padding-top: 40px;
+        margin-top: 36px;
+        font-size: 0.875rem;
+        letter-spacing: 0.5px;
+        border-top: 1px solid rgba($white, 0.05);
+        a {
+            color: $text-light;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

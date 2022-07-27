@@ -1,0 +1,6 @@
+<div class="widget">
+    <h4 class="widget-title">{{t "Product"}}</h4>
+    <div class="content tagcloud">
+        {{#get "tags" limit="3" order="published_at asc"}}{{tags separator=" "}}{{/get}}
+    </div>
+</div>
